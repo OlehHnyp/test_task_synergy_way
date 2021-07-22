@@ -1,0 +1,12 @@
+version: "3"
+
+volumes:
+    synergy_way_server_db_sql3:
+    
+services:
+    synergy_way_server:
+        build: backend/django_rest/
+        ports:
+            - 8001:8000
+        volumes:
+            - synergy_way_server_db_sql3
